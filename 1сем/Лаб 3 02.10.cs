@@ -3,7 +3,7 @@ class Q
 {
 	static void Main()
 	{
-	    int a,b,n,q=1,z=1,w=0,y=0,e=999,r=0,t=0;
+	    int a,b,n,q=1,z=1,w=0,y=0,e=999999999,r=0,t=0;
 	    Console.WriteLine("введите кол-во чисел > 1");
 	    n=Convert.ToInt32(Console.ReadLine());
 	    Console.WriteLine("введите числа");
@@ -19,8 +19,6 @@ class Q
 	    {
     	    r=a;
 	    }
-	    
-	    
 	    
 	    do
 	    {
@@ -68,16 +66,16 @@ class Q
                 r=0;
             }
             
-            if(y<e)
-            {
-                e=y;
-            }
-            
 	        n--;
 	        a=b;
 	        b=Convert.ToInt32(Console.ReadLine());
 	    }
 	    while(n>1);
+	    
+	    if(y<e)
+            {
+                e=y;
+            }
 	    
 	    Console.WriteLine("макс. размер подпоследовательности, состоящей из одинаковых элементов = "+z);
 	    Console.WriteLine("мин. размер подпоследовательности, состоящей из четных элементов = "+e);
