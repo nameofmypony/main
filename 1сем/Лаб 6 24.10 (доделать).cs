@@ -4,7 +4,7 @@ class Q
     static void Main()
     {
         //задание массива
-        int m, n, sum1, sum2, z, y, s = 0;
+        int m, n, sum1, sum2, z, y, s = 0, summ1, summ2, pro1, pro2, zer1, zer2, w = 0;
         m = Convert.ToInt32(Console.ReadLine());
         n = Convert.ToInt32(Console.ReadLine());
         int[,] a = new int[m, n];
@@ -67,7 +67,34 @@ class Q
             Console.WriteLine();
         }
         //определение пар строк, состоящих из одинаковых элементов(1 1 2 и 1 2 1 считается)
-
+        Console.WriteLine("пары строк из одинаковых элементов:");
+        for (int i = 0; i < m; i++)//произвольная строка
+        {
+            for (int q = i + 1; q < m; q++)//другая произвольная строка
+            {
+                summ1 = 0;
+                summ2 = 0;
+                pro1 = 1;
+                pro2 = 1;
+                zer1 = 0;
+                zer2 = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    summ1 += a[i, j];
+                    summ2 += a[q, j];
+                    pro1 *= a[i, j];
+                    pro2 *= a[q, j];
+                    if (a[i, j] == 0) { zer1++; }
+                    if (a[q, j] == 0) { zer2++; }
+                }
+                if ((summ1 == summ2) && (pro1 == pro2) && (zer1 == zer2))
+                {
+                    Console.WriteLine(i + 1 + " и " + (q + 1));
+                    w++;
+                }
+            }
+        }
+        if (w == 0) { Console.WriteLine("не существует"); }
         //определение элементов минимакса
         Console.WriteLine("положение элементов минимакса исходного массива:");
         for (int i = 0; i < m; i++)
@@ -91,7 +118,7 @@ class Q
                 }
                 if (y == 1)
                 {
-                    Console.WriteLine(i + 1 + " " + (j + 1));
+                    Console.WriteLine(i + 1 + " строка " + (j + 1) + " столбец");
                     s++;
                 }
                 y = 1;
@@ -111,7 +138,7 @@ class Q
                 }
                 if (y == 1)
                 {
-                    Console.WriteLine(i + 1 + " " + (j + 1));
+                    Console.WriteLine(i + 1 + " строка " + (j + 1) + " столбец");
                     s++;
                 }
             }
