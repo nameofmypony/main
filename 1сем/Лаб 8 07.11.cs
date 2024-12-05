@@ -1,6 +1,6 @@
 using System;
 using System.Text.RegularExpressions;
-class E
+class Q
 {
     static void Main()
     {
