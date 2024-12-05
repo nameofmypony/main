@@ -30,13 +30,11 @@ class Q
             }
             if (f == 1)
             {
-                Console.Write(s);
-                Console.Write(" ");
+                Console.WriteLine(s);
                 q++;
             }
         }
         if (q == 0) Console.WriteLine("нет");
-        else Console.WriteLine();
         //определить, является ли строка палиндромом
         f = 1;
         char[] m = a.ToCharArray();
@@ -81,7 +79,7 @@ class Q
             }
         }
         if (g == 0) answer = string.Concat(answer, "нет");
-        Console.Write("строки, в которых гласных букв больше, чем согласных:");
+        Console.Write("строки, в которых гласных букв больше, чем согласных: ");
         Console.WriteLine(answer);
     }
 }
