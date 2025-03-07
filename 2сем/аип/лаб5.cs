@@ -6,7 +6,7 @@ class Program
         Console.WriteLine("enter numbers separated by spaces");
         var dictionary = new Dictionary<int, int>();
         string input = Console.ReadLine();
-        string[] words = input.Split(" ");
+        string[] words = input.Split(' ');
         foreach (string word in words)
         {
             if (int.TryParse(word, out int number))
