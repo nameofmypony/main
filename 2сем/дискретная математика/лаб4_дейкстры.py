@@ -1,9 +1,9 @@
 A = [
-    [0, 10, 0, 5, 0],
-    [0, 0, 1, 2, 0],
-    [0, 0, 0, 0, 3],
-    [0, 3, 9, 0, 2],
-    [0, 0, 4, 6, 0]
+    [0, 10, float('inf'), 5, float('inf')],
+    [float('inf'), 0, 1, 2, float('inf')],
+    [float('inf'), float('inf'), 0, float('inf'), 3],
+    [float('inf'), 3, 9, 0, 2],
+    [float('inf'), float('inf'), 4, 6, 0]
 ]
 number = len(A)
 start = 0
