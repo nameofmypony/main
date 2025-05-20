@@ -21,6 +21,9 @@ class Program
     static List<Phone> info = [];
     static void Main()
     {
+        Console.InputEncoding = System.Text.Encoding.UTF8;
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        
         bool exit = false;
 
         while (!exit)
