@@ -5,7 +5,6 @@ public class Phone
     public string Number { get; set; }
     public string Name { get; set; }
     public string Provider { get; set; }
-
     public Phone(string number, string name, string provider)
     {
         Number = number;
