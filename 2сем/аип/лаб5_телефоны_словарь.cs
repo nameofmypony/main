@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 public class Phone
 {
-    public string Number { get; set; }
-    public string Name { get; set; }
-    public string Provider { get; set; }
+    public string Number;
+    public string Name;
+    public string Provider;
     public Phone(string number, string name, string provider)
     {
         Number = number;
@@ -18,13 +18,13 @@ class Program
     {
         List<Phone> phones =
         [
-            new Phone("1234567890", "Ivanov I.I.", "MTS"),
-            new Phone("0987654321", "Petrov P.P.", "Beeline"),
-            new Phone("5555555555", "Sidorov S.S.", "MTS"),
-            new Phone("4444444444", "Kozlov K.K.", "MTS"),
-            new Phone("3333333333", "Lebedev L.L.", "MegaFon"),
-            new Phone("2222222222", "Kuznetsova K.K.", "Beeline"),
-            new Phone("1111111111", "Petrov P.P.", "Beeline"),
+            new Phone("1111111111", "Иванов И. И.", "МТС"),
+            new Phone("2222222222", "Петров П. П.", "Билайн"),
+            new Phone("3333333333", "Сидоров С. С.", "МТС"),
+            new Phone("4444444444", "Козлов К. К.", "МТС"),
+            new Phone("5555555555", "Лебедев Л. Л.", "Мегафон"),
+            new Phone("6666666666", "Кузнецова К. К.", "Билайн"),
+            new Phone("7777777777", "Петров П. П.", "Билайн"),
         ];
         Dictionary<string, int> freq = [];
         foreach (var phone in phones)
@@ -42,7 +42,7 @@ class Program
         {
             if (x.Value == max) answer.Add(x.Key);
         }
-        Console.WriteLine($"the most popular operators (used {max} times):");
+        Console.WriteLine($"Самый(ые) популярный(ые) оператор(ы) ({max} абонента):");
         foreach (var x in answer)
         {
             Console.WriteLine(x);
