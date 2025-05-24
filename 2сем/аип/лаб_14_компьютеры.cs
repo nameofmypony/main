@@ -7,7 +7,7 @@ class Laptop
     public string Brand;
     public string Model;
 }
-class OperatingSystem
+class OS
 {
     public int Id;
     public string Name;
@@ -28,12 +28,12 @@ class Program
         new Laptop { Id = 2, Brand = "Dell", Model = "XPS 15" },
         new Laptop { Id = 3, Brand = "Apple", Model = "MacBook Pro" }
     ];
-    static List<OperatingSystem> OSs =
+    static List<OS> OSs =
     [
-        new OperatingSystem { Id = 1, Name = "Windows 10" },
-        new OperatingSystem { Id = 2, Name = "Windows 11" },
-        new OperatingSystem { Id = 3, Name = "macOS" },
-        new OperatingSystem { Id = 4, Name = "Ubuntu" }
+        new OS { Id = 1, Name = "Windows 10" },
+        new OS { Id = 2, Name = "Windows 11" },
+        new OS { Id = 3, Name = "macOS" },
+        new OS { Id = 4, Name = "Ubuntu" }
     ];
     static List<User> users =
     [
@@ -108,7 +108,6 @@ class Program
             }
         }
     }
-
     static void All()
     {
         Console.WriteLine("\nполные данные пользователей:");
