@@ -12,12 +12,12 @@ class Program
         string input;
         while ((input = Console.ReadLine()) != "")
         {
-            fixed (char* strPtr = input)
+            fixed (char* strPtr = &input[0])
             {
                 char* current = strPtr;
                 while (*current != '\0')
                 {
-                    if (*current <= 255)
+                    if (*current < 256)
                     {
                         byte code = (byte)*current;
                         freq[code]++;
