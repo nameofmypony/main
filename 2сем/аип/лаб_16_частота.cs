@@ -36,7 +36,7 @@ unsafe class Program
                 if (freq[i] > max) max = freq[i];
             }
         }
-        Console.Write("\nсамые редкие символы: ");
+        Console.Write("самые редкие символы: ");
         for (int i = 0; i < 256; i++)
         {
             if (freq[i] == min && min > 0) Console.Write($"'{(char)i}' ");
