@@ -12,7 +12,7 @@ class Program
         string input;
         while ((input = Console.ReadLine()) != "")
         {
-            fixed (char* strPtr = &input[0])
+            fixed (char* strPtr = input)
             {
                 char* current = strPtr;
                 while (*current != '\0')
