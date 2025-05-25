@@ -12,9 +12,9 @@ unsafe class Program
         string input;
         while ((input = Console.ReadLine()) != "")
         {
-            fixed (char* charAddress = input)
+            fixed (char* strPtr = input)
             {
-                char* current = charAddress;
+                char* current = strPtr;
                 while (*current != '\0')
                 {
                     if (*current <= 255)
