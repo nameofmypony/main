@@ -19,7 +19,7 @@ class ProductMovement
     public string Type;
     public DateTime Date;
     public int Number;
-    public decimal Price;
+    public int Price;
 }
 class Program
 {
