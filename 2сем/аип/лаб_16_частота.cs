@@ -1,7 +1,7 @@
 using System;
-unsafe class Program
+class Program
 {
-    static void Main()
+    unsafe static void Main()
     {
         int* freq = stackalloc int[256];
         for (int i = 0; i < 256; i++)
