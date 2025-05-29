@@ -11,15 +11,15 @@ class Program
     {
         {
             string text = File.ReadAllText("input.txt");
-            string[] lines = text.Split('\n');
-            string[] wh = lines[0].Split(' ');
+            string[] lines = text.Split("\n");
+            string[] wh = lines[0].Split(" ");
             int w = int.Parse(wh[0]);
             int h = int.Parse(wh[1]);
 
             image = new int[h, w];
             for (int i = 0; i < h; i++)
             {
-                string[] line = lines[i + 1].Split(' ');
+                string[] line = lines[i + 1].Split(" ");
                 for (int j = 0; j < w; j++)
                     image[i, j] = int.Parse(line[j]);
             }
