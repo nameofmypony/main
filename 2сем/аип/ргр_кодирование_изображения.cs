@@ -11,7 +11,7 @@ class Program
     {
         {
             string text = File.ReadAllText("input.txt");
-            string[] lines = text.Split("\n");
+            string[] lines = text.Split('\n');
             string[] wh = lines[0].Split(' ');
             int w = int.Parse(wh[0]);
             int h = int.Parse(wh[1]);
