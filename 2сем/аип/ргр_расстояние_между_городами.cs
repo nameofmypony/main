@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        string[] lines = File.ReadAllLines("input.txt");
+        string[] lines = File.ReadAllLines("input1.txt");
         string[] city1 = lines[0].Split();
         string[] city2 = lines[1].Split();
         int latitude1 = int.Parse(city1[0]);
@@ -23,6 +23,8 @@ class Program
         dlon = Math.Min(dlon, 2 * Math.PI - dlon);
 
         double a = Math.Pow(Math.Sin(dlat / 2), 2) + Math.Cos(lat1) * Math.Cos(lat2) * Math.Pow(Math.Sin(dlon / 2), 2);
+        a = Math.Max(0.0, Math.Min(a, 1.0));
+        
         double angle = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
         double distance = R * angle;
 
